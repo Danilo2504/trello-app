@@ -1,28 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { useEffect } from 'react';
-import { getMyBoards, getListFromMyBoards, getCardsFromMyBoards } from './services/boards';
+import {View } from 'react-native';
+// import View1 from "./View1"
+import View2 from "./View2"
 
-export default function App() {
-  useEffect(() => {
-    getMyBoards();
-getListFromMyBoards();
-getCardsFromMyBoards();
-  
-  }, []);
-  return (
-    <View style={styles.container}>
-      <Text>Trello-App</Text>
-      <StatusBar style="auto" />
+export default function App(){
+  return ( 
+    <View>
+      <View2/>
+      {/* <View1/> */}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
